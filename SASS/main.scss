@@ -1,0 +1,133 @@
+// 1) VARIABLES
+
+/*
+Why Use Sass?
+Stylesheets are getting larger, more complex, and harder to maintain. This is where a CSS pre-processor can help.
+
+Sass lets you use features that do not exist in CSS, like variables, nested rules, mixins, imports, inheritance, built-in functions, and other stuff.
+
+
+A browser does not understand Sass code. Therefore, you will need a Sass pre-processor to convert Sass code into standard CSS.
+
+ This process is called transpiling. So, you need to give a transpiler (some kind of program) some Sass code and then get some CSS code back.
+
+ Tip: Transpiling is a term for taking a source code written in one language and transform/translate it into another language. */
+
+
+/*
+   2) operators * - +
+
+   3) nesting
+
+
+   4) mixing
+ */
+
+@import 'variable';
+// partials in sass 
+@import 'mixins';
+@import 'extend';
+html {
+    font-size: 62.5%;
+}
+
+h1 {
+    color: $bg-color;
+    font-size: 5rem + 1rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.showcase {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    place-items: center;
+    h1:hover {
+        color: red;
+    }
+    p {
+        background-color: #10ac69;
+        font-size: 5rem;
+        // this is nesting i dont need to write .showcase
+    }
+    h1 {
+        background-color: aqua;
+        &:hover {
+            color: red;
+        }
+    }
+}
+
+// 2) units in css 
+// /*
+//   a) absolute units  - fixed unit throught the web appearence
+//       eg;- cm, mm, in, px
+//       1cm = 37.8px
+//       pc - picas - 1/6 th 1 inch
+//       pt - points - 1/72th  1 inch
+//       px - pixels - 1/96th of 1 inch 
+//   b) relative units - based on browser the this values change or expand
+//   em - font sizes are inherited from parent element it will act acc to the parent element size
+//   ex
+//   ch
+//   rem - root em - eual to font size fixed to root element by default it has 1rem = 16px
+//   lh
+//   vw = 1/100 width of viewport
+//   vh = 1/100 of height of viewport
+//   vmin = vh
+//   vmax = vw 
+//   % = relative to parent size
+//   eg:- if height of the browser 800px
+//         then vh is 8px
+// */
+// example for em 
+// div {
+//     font-size: 16px;
+// }
+// div h3 {
+//     font-size: 2em;
+// }
+// h3 becomes now 32px
+// example for rem 
+// by default it takes it from the root element that is body which has 16px
+// div h2 {
+//     font-size: 1.5rem;
+// }
+// now h2 will have 24px
+// example for pecentage % 
+// div {
+//     width: 400px;
+// }
+// div {
+//     width: 75%; // now div becomes 300px
+// }
+// 4) mixin
+
+/*
+   Sass Mixins
+The @mixin directive lets you create CSS code that is to be reused throughout the website.
+
+The @include directive is created to let you use (include) the mixin.
+*/
+
+
+/* 
+i  can use the above by  @include
+   @include codeflex
+*/
+
+// mixing properties i can pass the parameter to the mixin which strt with $ symbol
+
+/*
+
+SASS - Syntactically awesome stylesheet used in css in which we dnt need 
+    to add curly braces(which is identation)
+SCSS - syntactically awesome stylesheet => we hv curly braces
+*/

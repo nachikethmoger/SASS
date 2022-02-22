@@ -1,0 +1,86 @@
+/*
+Why Use Sass?
+Stylesheets are getting larger, more complex, and harder to maintain. This is where a CSS pre-processor can help.
+
+Sass lets you use features that do not exist in CSS, like variables, nested rules, mixins, imports, inheritance, built-in functions, and other stuff.
+
+
+A browser does not understand Sass code. Therefore, you will need a Sass pre-processor to convert Sass code into standard CSS.
+
+ This process is called transpiling. So, you need to give a transpiler (some kind of program) some Sass code and then get some CSS code back.
+
+ Tip: Transpiling is a term for taking a source code written in one language and transform/translate it into another language. */
+/*
+   2) operators * - +
+
+   3) nesting
+
+
+   4) mixing
+ */
+html {
+  font-size: 62.5%;
+}
+
+h1 {
+  color: #10ac69;
+  font-size: 6rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.showcase {
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  place-items: center;
+}
+
+.showcase h1:hover {
+  color: red;
+}
+
+.showcase p {
+  background-color: #10ac69;
+  font-size: 5rem;
+}
+
+.showcase h1 {
+  background-color: aqua;
+}
+
+.showcase h1:hover {
+  color: red;
+}
+
+/*
+   Sass Mixins
+The @mixin directive lets you create CSS code that is to be reused throughout the website.
+
+The @include directive is created to let you use (include) the mixin.
+*/
+/* 
+i  can use the above by  @include
+   @include codeflex
+*/
+/*
+
+SASS - Syntactically awesome stylesheet used in css in which we dnt need 
+    to add curly braces(which is identation)
+SCSS - syntactically awesome stylesheet => we hv curly braces
+*/
+/*# sourceMappingURL=main.css.map */
